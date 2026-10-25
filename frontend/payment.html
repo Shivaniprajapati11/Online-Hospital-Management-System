@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout & Consultation Payment - MediCare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hospital" style="color: var(--primary);"></i>
+            Medi<span>Care</span>
+            <span class="logo-badge">HEALTH</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="patient-dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+            <a href="appointment.html"><i class="fa-solid fa-calendar-plus"></i> Book Visit</a>
+            <a href="my-appointments.html"><i class="fa-solid fa-calendar-days"></i> Appointments</a>
+            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+    </nav>
+
+    <section class="login-section">
+        <div class="login-card" style="max-width: 540px;">
+            <div style="text-align: center; margin-bottom: 12px;">
+                <div class="service-icon" style="margin: 0 auto 12px auto; background: var(--accent-light); color: var(--accent);">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+            </div>
+
+            <h1>Clinical Payment Gateway</h1>
+            <p class="login-subtitle">Review appointment details and complete payment securely</p>
+
+            <div class="payment-info" style="margin-top: 10px;">
+                <p><strong>Doctor:</strong> Dr. Amit Sharma</p>
+                <p><strong>Department:</strong> Cardiology</p>
+                <p><strong>Date & Time:</strong> Selected Clinic Slot</p>
+                <p><strong>Consultation Fee:</strong> ₹500</p>
+            </div>
+
+            <form id="paymentForm">
+                <div>
+                    <label for="paymentMethod"><i class="fa-solid fa-wallet" style="color:var(--primary); margin-right:4px;"></i> Select Payment Method</label>
+                    <select id="paymentMethod" required>
+                        <option value="UPI" selected>Instant UPI (Google Pay / PhonePe / Paytm)</option>
+                        <option value="CARD">Debit / Credit Card (Visa / Mastercard / RuPay)</option>
+                        <option value="NETBANKING">Net Banking (HDFC, SBI, ICICI, Axis)</option>
+                        <option value="CASH">Pay at Hospital Desk (Pre-authorized)</option>
+                    </select>
+                </div>
+
+                <div style="background: #f8fafc; padding: 14px; border-radius: 8px; border: 1px dashed #cbd5e1; display: flex; align-items: center; gap: 12px;">
+                    <i class="fa-solid fa-lock" style="font-size: 20px; color: var(--accent);"></i>
+                    <div style="font-size: 13px; color: var(--text-secondary);">
+                        Transactions are encrypted with <strong>256-Bit SSL</strong> and compliant with RBI & healthcare guidelines.
+                    </div>
+                </div>
+
+                <button type="submit" class="login-btn" style="background: var(--accent);">
+                    <i class="fa-solid fa-check"></i> Authorize & Confirm Appointment
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MediCare Hospital. Instant e-receipt and SMS confirmation dispatched upon payment.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

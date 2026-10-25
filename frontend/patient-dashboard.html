@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - MediCare Healthcare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hospital" style="color: var(--primary);"></i>
+            Medi<span>Care</span>
+            <span class="logo-badge">HEALTH</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="patient-dashboard.html" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+            <a href="doctors.html"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
+            <a href="appointment.html"><i class="fa-solid fa-calendar-plus"></i> Book Visit</a>
+            <a href="my-appointments.html"><i class="fa-solid fa-calendar-days"></i> Appointments</a>
+            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="dashboard-header">
+            <div>
+                <p class="welcome-text">PATIENT DIGITAL HEALTH PORTAL</p>
+                <h1>Welcome, Patient</h1>
+                <p>Track your upcoming doctor appointments, electronic health records, diagnostic tests, and clinical billing seamlessly.</p>
+            </div>
+            <div>
+                <a href="appointment.html" class="primary-btn" style="background: white; color: var(--primary) !important; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                    <i class="fa-solid fa-plus"></i> Book New Appointment
+                </a>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="dashboard-container">
+            <div class="stat-card">
+                <div class="stat-icon blue"><i class="fa-solid fa-calendar-check"></i></div>
+                <div class="stat-info">
+                    <p>Total Consultations</p>
+                    <h2>2</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <div class="stat-info">
+                    <p>Upcoming Visits</p>
+                    <h2>1</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange"><i class="fa-solid fa-file-prescription"></i></div>
+                <div class="stat-info">
+                    <p>Active Prescriptions</p>
+                    <h2>2</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon red"><i class="fa-solid fa-heart-pulse"></i></div>
+                <div class="stat-info">
+                    <p>Health Vitals</p>
+                    <h2 style="font-size: 20px; color: var(--accent);">Normal</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Patient Health Vitals Summary -->
+        <div style="background: white; border: 1px solid var(--border-color); border-radius: var(--radius); padding: 24px; margin-bottom: 30px; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <h3 style="font-size: 18px; font-weight: 700; color: var(--secondary);">
+                    <i class="fa-solid fa-wave-square" style="color: var(--primary); margin-right: 8px;"></i>
+                    Recorded Patient Vitals
+                </h3>
+                <span class="status completed"><i class="fa-solid fa-shield-heart"></i> Verified Healthy</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;">
+                <div style="background:#f8fafc; padding:16px; border-radius:10px; border:1px solid #e2e8f0;">
+                    <div style="color:var(--text-muted); font-size:12px; font-weight:600; text-transform:uppercase;">Blood Pressure</div>
+                    <div style="font-size:20px; font-weight:700; color:var(--secondary); margin-top:4px;">120/80 <span style="font-size:12px; font-weight:normal; color:#64748b;">mmHg</span></div>
+                </div>
+                <div style="background:#f8fafc; padding:16px; border-radius:10px; border:1px solid #e2e8f0;">
+                    <div style="color:var(--text-muted); font-size:12px; font-weight:600; text-transform:uppercase;">Heart Rate</div>
+                    <div style="font-size:20px; font-weight:700; color:var(--secondary); margin-top:4px;">72 <span style="font-size:12px; font-weight:normal; color:#64748b;">bpm</span></div>
+                </div>
+                <div style="background:#f8fafc; padding:16px; border-radius:10px; border:1px solid #e2e8f0;">
+                    <div style="color:var(--text-muted); font-size:12px; font-weight:600; text-transform:uppercase;">Oxygen Saturation (SpO2)</div>
+                    <div style="font-size:20px; font-weight:700; color:var(--secondary); margin-top:4px;">99% <span style="font-size:12px; font-weight:normal; color:#10b981;">Optimal</span></div>
+                </div>
+                <div style="background:#f8fafc; padding:16px; border-radius:10px; border:1px solid #e2e8f0;">
+                    <div style="color:var(--text-muted); font-size:12px; font-weight:600; text-transform:uppercase;">Blood Group</div>
+                    <div style="font-size:20px; font-weight:700; color:var(--secondary); margin-top:4px;">O+ <span style="font-size:12px; font-weight:normal; color:#64748b;">Universal Donor</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Upcoming Clinic Visits Table -->
+        <div class="dashboard-table-container">
+            <div class="table-header">
+                <div>
+                    <h2 style="font-size: 19px; font-weight: 700; color: var(--secondary);">
+                        <i class="fa-solid fa-calendar-check" style="color:var(--primary); margin-right:8px;"></i> My Scheduled Clinic Visits
+                    </h2>
+                    <p style="color: var(--text-muted); font-size: 13.5px; margin-top: 4px;">Live schedule of your confirmed consultations from hospital database.</p>
+                </div>
+                <div>
+                    <a href="appointment.html" class="primary-btn" style="font-size: 13px; padding: 8px 16px;">
+                        <i class="fa-solid fa-plus"></i> Book Another Visit
+                    </a>
+                </div>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table id="patientAppointmentsTable">
+                    <thead>
+                        <tr>
+                            <th>Appointment ID</th>
+                            <th>Doctor</th>
+                            <th>Department</th>
+                            <th>Date & Time</th>
+                            <th>Status</th>
+                            <th>Billing Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>APT-202601</strong></td>
+                            <td>Dr. Amit Sharma</td>
+                            <td>Cardiology</td>
+                            <td>2026-10-15 (11:00 AM)</td>
+                            <td><span class="status confirmed"><i class="fa-solid fa-circle-check"></i> Confirmed</span></td>
+                            <td>₹800 (Paid)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Action Modules Grid -->
+        <h3 style="font-size: 19px; font-weight: 700; color: var(--secondary); margin-bottom: 18px;">
+            Patient Healthcare Services
+        </h3>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-calendar-plus"></i></div>
+                <h3>Book Appointment</h3>
+                <p>Schedule a clinic visit with our experienced specialists across 12 medical departments.</p>
+                <a href="appointment.html" class="primary-btn" style="margin-top: 15px; width: 100%; justify-content: center;">
+                    Book Consultation
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                <h3>My Appointments</h3>
+                <p>Review active appointments, view doctor notes, check confirmation slips and rescheduling.</p>
+                <a href="my-appointments.html" class="secondary-btn" style="margin-top: 15px; width: 100%; justify-content: center;">
+                    View Appointments
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-file-medical"></i></div>
+                <h3>Medical Records</h3>
+                <p>Access your past consultation summaries, e-prescriptions, lab tests, and imaging diagnostics.</p>
+                <a href="medical-records.html" class="secondary-btn" style="margin-top: 15px; width: 100%; justify-content: center;">
+                    Access Records
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-id-card"></i></div>
+                <h3>Patient Profile</h3>
+                <p>Manage legal contact details, emergency contacts, blood group, and account credentials.</p>
+                <a href="patient-profile.html" class="secondary-btn" style="margin-top: 15px; width: 100%; justify-content: center;">
+                    View Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MediCare Hospital. All Rights Reserved. 24/7 Patient Support: 1800-123-456</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

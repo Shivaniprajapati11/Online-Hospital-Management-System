@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Scheduled Appointments - MediCare Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hospital" style="color: var(--primary);"></i>
+            Medi<span>Care</span>
+            <span class="logo-badge">HEALTH</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="patient-dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+            <a href="doctors.html"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
+            <a href="appointment.html"><i class="fa-solid fa-calendar-plus"></i> Book Visit</a>
+            <a href="my-appointments.html" class="active"><i class="fa-solid fa-calendar-days"></i> Appointments</a>
+            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="dashboard-header">
+            <div>
+                <p class="welcome-text">SCHEDULED CONSULTATIONS</p>
+                <h1>My Appointments History</h1>
+                <p>Review confirmed upcoming clinic appointments, past medical consultations, and download official visit slips.</p>
+            </div>
+            <div>
+                <a href="appointment.html" class="primary-btn" style="background: white; color: var(--primary) !important;">
+                    <i class="fa-solid fa-plus"></i> Book New Visit
+                </a>
+            </div>
+        </div>
+
+        <div class="appointments-section">
+            <div class="appointments-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+                <div>
+                    <h2 style="font-size: 20px; font-weight: 700; color: var(--secondary);">
+                        <i class="fa-solid fa-clock-rotate-left" style="color:var(--primary); margin-right: 8px;"></i>
+                        Your Registered Clinic Visits
+                    </h2>
+                    <p style="color: var(--text-muted); font-size: 13.5px;">All visits confirmed with digital payment receipts.</p>
+                </div>
+                <button class="secondary-btn" onclick="window.print()" style="font-size: 13px;">
+                    <i class="fa-solid fa-print"></i> Print Schedule
+                </button>
+            </div>
+
+            <!-- Appointment Box 1 -->
+            <div class="appointment-box">
+                <div class="appointment-top">
+                    <h2><i class="fa-solid fa-stethoscope" style="color:var(--primary); margin-right:8px;"></i> Routine Heart Health Assessment</h2>
+                    <span class="status upcoming"><i class="fa-solid fa-circle-check"></i> Confirmed</span>
+                </div>
+                <div class="appointment-details">
+                    <div>
+                        <strong>Doctor</strong>
+                        <p><i class="fa-solid fa-user-doctor" style="color:var(--primary);"></i> Dr. Amit Sharma (Cardiology)</p>
+                    </div>
+                    <div>
+                        <strong>Date & Time</strong>
+                        <p><i class="fa-solid fa-calendar-days" style="color:var(--primary);"></i> 15 October 2026 at 11:00 AM</p>
+                    </div>
+                    <div>
+                        <strong>Appointment ID</strong>
+                        <p><i class="fa-solid fa-hashtag" style="color:var(--primary);"></i> APT-202601</p>
+                    </div>
+                    <div>
+                        <strong>Payment Status</strong>
+                        <p><i class="fa-solid fa-credit-card" style="color:var(--accent);"></i> Paid - ₹800 (UPI)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Appointment Box 2 -->
+            <div class="appointment-box">
+                <div class="appointment-top">
+                    <h2><i class="fa-solid fa-stethoscope" style="color:var(--primary); margin-right:8px;"></i> General Consultation & Routine Blood Work</h2>
+                    <span class="status completed"><i class="fa-solid fa-check"></i> Completed</span>
+                </div>
+                <div class="appointment-details">
+                    <div>
+                        <strong>Doctor</strong>
+                        <p><i class="fa-solid fa-user-doctor" style="color:var(--primary);"></i> Dr. Priya Mehta (General Medicine)</p>
+                    </div>
+                    <div>
+                        <strong>Date & Time</strong>
+                        <p><i class="fa-solid fa-calendar-days" style="color:var(--primary);"></i> 20 September 2026 at 10:30 AM</p>
+                    </div>
+                    <div>
+                        <strong>Appointment ID</strong>
+                        <p><i class="fa-solid fa-hashtag" style="color:var(--primary);"></i> APT-202602</p>
+                    </div>
+                    <div>
+                        <strong>Payment Status</strong>
+                        <p><i class="fa-solid fa-credit-card" style="color:var(--accent);"></i> Paid - ₹500 (CARD)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MediCare Hospital. Need to reschedule or cancel? Contact patient care: 1800-123-456.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

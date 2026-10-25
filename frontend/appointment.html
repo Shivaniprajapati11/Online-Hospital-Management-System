@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Doctor Consultation - MediCare Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hospital" style="color: var(--primary);"></i>
+            Medi<span>Care</span>
+            <span class="logo-badge">HEALTH</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="patient-dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+            <a href="doctors.html"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
+            <a href="my-appointments.html"><i class="fa-solid fa-calendar-days"></i> My Appointments</a>
+            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+    </nav>
+
+    <section class="login-section">
+        <div class="login-card" style="max-width: 560px;">
+            <div style="text-align: center; margin-bottom: 12px;">
+                <div class="service-icon" style="margin: 0 auto 12px auto;">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+            </div>
+
+            <h1>Book Clinical Consultation</h1>
+            <p class="login-subtitle">Choose clinical department, specialist doctor, and preferred time slot</p>
+
+            <form id="appointmentForm">
+                <div>
+                    <label for="department"><i class="fa-solid fa-stethoscope" style="color:var(--primary); margin-right:4px;"></i> Medical Department</label>
+                    <select id="department" required>
+                        <option value="">Select Clinical Department</option>
+                        <option value="cardiology">Cardiology (Heart Health)</option>
+                        <option value="general">General Medicine & Internal Care</option>
+                        <option value="orthopedic">Orthopedics & Joint Care</option>
+                        <option value="dermatology">Dermatology & Skin Clinic</option>
+                        <option value="neurology">Neurology & Brain Sciences</option>
+                        <option value="pediatrics">Pediatrics & Child Health</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="doctor"><i class="fa-solid fa-user-doctor" style="color:var(--primary); margin-right:4px;"></i> Attending Specialist</label>
+                    <select id="doctor" required>
+                        <option value="">Select Doctor</option>
+                        <option value="Dr. Amit Sharma" data-fee="800" data-dept="Cardiology">Dr. Amit Sharma - Cardiologist (Fee: ₹800)</option>
+                        <option value="Dr. Priya Mehta" data-fee="500" data-dept="General Medicine">Dr. Priya Mehta - General Physician (Fee: ₹500)</option>
+                        <option value="Dr. Rahul Patil" data-fee="750" data-dept="Orthopedics">Dr. Rahul Patil - Orthopedic Surgeon (Fee: ₹750)</option>
+                        <option value="Dr. Neha Shah" data-fee="600" data-dept="Dermatology">Dr. Neha Shah - Dermatologist (Fee: ₹600)</option>
+                        <option value="Dr. Rajesh Verma" data-fee="900" data-dept="Neurology">Dr. Rajesh Verma - Neurologist (Fee: ₹900)</option>
+                        <option value="Dr. Ananya Iyer" data-fee="550" data-dept="Pediatrics">Dr. Ananya Iyer - Pediatrician (Fee: ₹550)</option>
+                    </select>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                    <div>
+                        <label for="appointmentDate"><i class="fa-solid fa-calendar-day" style="color:var(--primary); margin-right:4px;"></i> Preferred Date</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+
+                    <div>
+                        <label for="appointmentTime"><i class="fa-solid fa-clock" style="color:var(--primary); margin-right:4px;"></i> Time Slot</label>
+                        <select id="appointmentTime" required>
+                            <option value="">Select Slot</option>
+                            <option value="09:30 AM">09:30 AM (Morning)</option>
+                            <option value="10:30 AM">10:30 AM (Morning)</option>
+                            <option value="11:30 AM">11:30 AM (Morning)</option>
+                            <option value="02:30 PM">02:30 PM (Afternoon)</option>
+                            <option value="04:30 PM">04:30 PM (Evening)</option>
+                            <option value="06:00 PM">06:00 PM (Evening)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Fee calculation summary banner -->
+                <div style="background: var(--primary-light); padding: 14px 18px; border-radius: var(--radius-sm); border: 1px solid #bae6fd; display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+                    <div>
+                        <span style="font-size: 12.5px; font-weight: 700; color: var(--primary-dark); text-transform: uppercase;">Consultation Fee</span>
+                        <div style="font-size: 13px; color: var(--text-secondary);">Includes digital prescription & follow-up</div>
+                    </div>
+                    <div id="displayFee" style="font-size: 20px; font-weight: 800; color: var(--primary-dark);">
+                        ₹500
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn" style="width: 100%; justify-content: center; margin-top: 10px;">
+                    <i class="fa-solid fa-credit-card"></i> Confirm & Proceed to Payment
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MediCare Hospital. Instant appointment confirmation and automatic calendar integration.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Set minimum date to today
+        const dateInput = document.getElementById("appointmentDate");
+        if (dateInput) {
+            const today = new Date().toISOString().split("T")[0];
+            dateInput.min = today;
+            dateInput.value = today;
+        }
+
+        // Dynamically update fee display on doctor change
+        const doctorSelect = document.getElementById("doctor");
+        const displayFee = document.getElementById("displayFee");
+        if (doctorSelect && displayFee) {
+            doctorSelect.addEventListener("change", function () {
+                const opt = doctorSelect.options[doctorSelect.selectedIndex];
+                if (opt && opt.dataset.fee) {
+                    displayFee.textContent = "₹" + opt.dataset.fee;
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

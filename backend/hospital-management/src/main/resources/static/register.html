@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration - MediCare Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hospital" style="color: var(--primary);"></i>
+            Medi<span>Care</span>
+            <span class="logo-badge">HEALTH</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="doctors.html"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
+            <a href="appointment.html"><i class="fa-solid fa-calendar-check"></i> Book Visit</a>
+            <a href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+        </div>
+    </nav>
+
+    <section class="login-section">
+        <div class="login-card" style="max-width: 540px;">
+            <div style="text-align: center; margin-bottom: 15px;">
+                <div class="service-icon" style="margin: 0 auto 12px auto;">
+                    <i class="fa-solid fa-id-card"></i>
+                </div>
+            </div>
+
+            <h1>Create Patient Account</h1>
+            <p class="login-subtitle">Register to book online appointments, access lab records & prescriptions</p>
+
+            <form id="registerForm">
+                <div>
+                    <label for="name"><i class="fa-solid fa-user" style="color:var(--primary); margin-right:4px;"></i> Full Legal Name</label>
+                    <input type="text" id="name" placeholder="e.g. John Doe" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div>
+                        <label for="registerEmail"><i class="fa-solid fa-envelope" style="color:var(--primary); margin-right:4px;"></i> Email Address</label>
+                        <input type="email" id="registerEmail" placeholder="name@example.com" required>
+                    </div>
+                    <div>
+                        <label for="phone"><i class="fa-solid fa-phone" style="color:var(--primary); margin-right:4px;"></i> Phone Number</label>
+                        <input type="tel" id="phone" placeholder="10-digit mobile" required>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div>
+                        <label for="dob"><i class="fa-solid fa-calendar" style="color:var(--primary); margin-right:4px;"></i> Date of Birth</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div>
+                        <label for="gender"><i class="fa-solid fa-venus-mars" style="color:var(--primary); margin-right:4px;"></i> Gender</label>
+                        <select id="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div>
+                        <label for="registerPassword"><i class="fa-solid fa-lock" style="color:var(--primary); margin-right:4px;"></i> Password</label>
+                        <input type="password" id="registerPassword" placeholder="Create password" required>
+                    </div>
+                    <div>
+                        <label for="confirmPassword"><i class="fa-solid fa-shield-halved" style="color:var(--primary); margin-right:4px;"></i> Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    <i class="fa-solid fa-user-plus" style="margin-right: 6px;"></i> Register & Create Health Profile
+                </button>
+            </form>
+
+            <p class="register-text">
+                Already registered with MediCare?
+                <a href="login.html">Sign in here</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MediCare Hospital. All Rights Reserved. Compliant with healthcare data privacy standards.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

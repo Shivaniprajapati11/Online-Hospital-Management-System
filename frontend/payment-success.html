@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Payment Confirmed - MediCare Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hospital" style="color: var(--primary);"></i>
+            Medi<span>Care</span>
+            <span class="logo-badge">HEALTH</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="patient-dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+            <a href="my-appointments.html"><i class="fa-solid fa-calendar-days"></i> Appointments</a>
+            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+    </nav>
+
+    <section class="login-section">
+        <div class="login-card payment-success-card" style="max-width: 580px;">
+            <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <h1 style="color: var(--secondary);">Consultation Confirmed!</h1>
+            <p class="login-subtitle">Your appointment has been registered and verified in our hospital system.</p>
+
+            <div class="payment-info">
+                <p><strong>Transaction ID:</strong> TXN-89240182</p>
+                <p><strong>Appointment ID:</strong> APT-202603</p>
+                <p><strong>Doctor:</strong> Dr. Amit Sharma</p>
+                <p><strong>Amount Paid:</strong> ₹800</p>
+                <p><strong>Payment Method:</strong> UPI</p>
+                <p><strong>Status:</strong> <span class="status completed"><i class="fa-solid fa-check"></i> Paid & Confirmed</span></p>
+            </div>
+
+            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; margin-bottom: 24px; font-size: 13.5px; color: #166534; text-align: center;">
+                <i class="fa-solid fa-envelope-circle-check" style="margin-right: 6px;"></i> A confirmation SMS & email slip with directions has been sent to your registered contact.
+            </div>
+
+            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                <button onclick="window.print()" class="secondary-btn">
+                    <i class="fa-solid fa-print"></i> Print Official Receipt
+                </button>
+                <a href="patient-dashboard.html" class="primary-btn">
+                    <i class="fa-solid fa-arrow-left"></i> Return to Dashboard
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MediCare Hospital. For clinical emergency or changes, call toll-free: 1800-123-456.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Console - MediCare Hospital Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hospital" style="color: var(--primary);"></i>
+            Medi<span>Care</span>
+            <span class="logo-badge" style="background:#fee2e2; color:#b91c1c;">ADMIN</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="admin-dashboard.html" class="active"><i class="fa-solid fa-chart-pie"></i> Admin Console</a>
+            <a href="doctors.html"><i class="fa-solid fa-user-doctor"></i> Doctor Roster</a>
+            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="dashboard-header" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+            <div>
+                <p class="welcome-text" style="color: #38bdf8;">EXECUTIVE MANAGEMENT SYSTEM</p>
+                <h1>Hospital Administration Console</h1>
+                <p style="color: #94a3b8;">Real-time overview of registered patients, clinical appointments, medical specialists, and hospital revenue in MySQL.</p>
+            </div>
+            <div>
+                <button class="primary-btn" onclick="location.reload()" style="background:#0284c7;">
+                    <i class="fa-solid fa-rotate"></i> Refresh Metrics
+                </button>
+            </div>
+        </div>
+
+        <!-- Live Metrics Cards -->
+        <div class="dashboard-container">
+            <div class="stat-card">
+                <div class="stat-icon blue"><i class="fa-solid fa-users"></i></div>
+                <div class="stat-info">
+                    <p>Total Patients</p>
+                    <h2>7</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green"><i class="fa-solid fa-user-doctor"></i></div>
+                <div class="stat-info">
+                    <p>On-Duty Doctors</p>
+                    <h2>6</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange"><i class="fa-solid fa-calendar-check"></i></div>
+                <div class="stat-info">
+                    <p>Appointments</p>
+                    <h2>2</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon red"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                <div class="stat-info">
+                    <p>Total Revenue</p>
+                    <h2>₹1,300</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Appointments Management Table -->
+        <div class="dashboard-table-container">
+            <div class="table-header">
+                <div>
+                    <h2><i class="fa-solid fa-list-check" style="color:var(--primary); margin-right:8px;"></i> Live Clinic Appointments (MySQL Database)</h2>
+                    <p style="color: var(--text-muted); font-size: 13.5px; margin-top: 4px;">Real-time clinic consultations scheduled across all hospital departments.</p>
+                </div>
+                <div>
+                    <a href="appointment.html" class="primary-btn" style="font-size: 13px; padding: 8px 16px;">
+                        <i class="fa-solid fa-plus"></i> New Appointment
+                    </a>
+                </div>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table id="appointmentsTable">
+                    <thead>
+                        <tr>
+                            <th>Appointment ID</th>
+                            <th>Patient Name</th>
+                            <th>Attending Doctor</th>
+                            <th>Schedule Date & Time</th>
+                            <th>Status</th>
+                            <th>Billing Amount</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>APT-202601</strong></td>
+                            <td>shivani prajapati</td>
+                            <td>Dr. Amit Sharma</td>
+                            <td>2026-10-15 (11:00 AM)</td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                            <td>₹800 (UPI)</td>
+                            <td>
+                                <button class="secondary-btn" style="padding:4px 8px; font-size:12px;">
+                                    <i class="fa-solid fa-check"></i> Done
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Live Patients Table from MySQL -->
+        <div class="dashboard-table-container">
+            <div class="table-header">
+                <div>
+                    <h2><i class="fa-solid fa-hospital-user" style="color:var(--primary); margin-right:8px;"></i> Registered Patients Directory (MySQL Database)</h2>
+                    <p style="color: var(--text-muted); font-size: 13.5px; margin-top: 4px;">Live registry of patients registered via portal.</p>
+                </div>
+                <div>
+                    <a href="register.html" class="secondary-btn" style="font-size: 13px; padding: 8px 16px;">
+                        <i class="fa-solid fa-user-plus"></i> Register Patient
+                    </a>
+                </div>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table id="patientsTable">
+                    <thead>
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Full Name</th>
+                            <th>Email Address</th>
+                            <th>Phone</th>
+                            <th>Gender</th>
+                            <th>Date of Birth</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>PAT000002</strong></td>
+                            <td>shivani prajapati</td>
+                            <td>test@gmail.com</td>
+                            <td>09511860242</td>
+                            <td>female</td>
+                            <td>2026-10-22</td>
+                            <td><span class="status completed"><i class="fa-solid fa-circle-check"></i> Registered</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Operations Navigation -->
+        <h3 style="font-size: 18px; font-weight: 700; color: var(--secondary); margin-bottom: 16px;">
+            Departmental Management
+        </h3>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                <h3>Doctors Directory</h3>
+                <p>Manage doctor schedules, fees, clinical specializations, and departmental assignments.</p>
+                <a href="doctors.html" class="primary-btn" style="margin-top: 15px; width: 100%; justify-content: center;">
+                    View Doctors Roster
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <h3>Clinical Scheduling</h3>
+                <p>Schedule walk-in patients, adjust clinic slots, and assign emergency doctors.</p>
+                <a href="appointment.html" class="secondary-btn" style="margin-top: 15px; width: 100%; justify-content: center;">
+                    Schedule Clinic Visit
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                <h3>Billing & Transactions</h3>
+                <p>Track consultation fee settlements, online UPI receipts, and revenue audits.</p>
+                <button class="secondary-btn" style="margin-top: 15px; width: 100%; justify-content: center;" onclick="showToast('Financial transactions verified in MySQL', 'success')">
+                    Audit Financials
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MediCare Hospital. System Administrator Console v3.0 (Enterprise Edition).</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

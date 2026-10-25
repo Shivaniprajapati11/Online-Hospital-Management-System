@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specialist Doctors Directory - MediCare Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hospital" style="color: var(--primary);"></i>
+            Medi<span>Care</span>
+            <span class="logo-badge">HEALTH</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="doctors.html" class="active"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
+            <a href="appointment.html"><i class="fa-solid fa-calendar-check"></i> Book Visit</a>
+            <a href="my-appointments.html"><i class="fa-solid fa-calendar-days"></i> Appointments</a>
+            <a href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="dashboard-header">
+            <div>
+                <p class="welcome-text">MEDICAL FACULTY & CONSULTANTS</p>
+                <h1>Consult Our Specialist Doctors</h1>
+                <p>Our multidisciplinary board-certified medical doctors bring years of clinical expertise, compassion, and cutting-edge treatments.</p>
+            </div>
+            <div>
+                <a href="appointment.html" class="primary-btn" style="background: white; color: var(--primary) !important;">
+                    <i class="fa-solid fa-calendar-plus"></i> Schedule Consultation
+                </a>
+            </div>
+        </div>
+
+        <!-- Filter Tags -->
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 25px;">
+            <button class="secondary-btn active" style="padding: 8px 16px; font-size: 13.5px; border-radius: 20px;">All Specialities</button>
+            <button class="secondary-btn" style="padding: 8px 16px; font-size: 13.5px; border-radius: 20px;">Cardiology</button>
+            <button class="secondary-btn" style="padding: 8px 16px; font-size: 13.5px; border-radius: 20px;">General Medicine</button>
+            <button class="secondary-btn" style="padding: 8px 16px; font-size: 13.5px; border-radius: 20px;">Orthopedics</button>
+            <button class="secondary-btn" style="padding: 8px 16px; font-size: 13.5px; border-radius: 20px;">Dermatology</button>
+            <button class="secondary-btn" style="padding: 8px 16px; font-size: 13.5px; border-radius: 20px;">Neurology</button>
+        </div>
+
+        <!-- Doctors Grid -->
+        <div class="doctors-grid">
+            <!-- Doctor 1 -->
+            <div class="doctor-card">
+                <div>
+                    <div class="doctor-header">
+                        <div class="doctor-avatar"><i class="fa-solid fa-user-doctor"></i></div>
+                        <div class="doctor-meta">
+                            <h3>Dr. Amit Sharma</h3>
+                            <p>Senior Cardiologist</p>
+                            <div style="color:#f59e0b; font-size:13px; margin-top:4px;">
+                                <i class="fa-solid fa-star"></i> 4.9 / 5.0 (280+ Reviews)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-details">
+                        <p><i class="fa-solid fa-graduation-cap" style="color:var(--primary); margin-right:6px;"></i> MBBS, MD, DM (Cardiology - AIIMS)</p>
+                        <p><i class="fa-solid fa-briefcase" style="color:var(--primary); margin-right:6px;"></i> 15 Years Clinical Experience</p>
+                        <p><i class="fa-solid fa-clock" style="color:var(--primary); margin-right:6px;"></i> Mon - Fri (09:00 AM - 02:00 PM)</p>
+                        <p><i class="fa-solid fa-tag" style="color:var(--accent); margin-right:6px;"></i> <strong>₹800</strong> Consultation Fee</p>
+                    </div>
+                </div>
+                <a href="appointment.html" class="primary-btn" style="width: 100%; justify-content: center;">
+                    <i class="fa-solid fa-calendar-check"></i> Book Appointment
+                </a>
+            </div>
+
+            <!-- Doctor 2 -->
+            <div class="doctor-card">
+                <div>
+                    <div class="doctor-header">
+                        <div class="doctor-avatar"><i class="fa-solid fa-user-doctor"></i></div>
+                        <div class="doctor-meta">
+                            <h3>Dr. Priya Mehta</h3>
+                            <p>Consultant Physician & Diabetologist</p>
+                            <div style="color:#f59e0b; font-size:13px; margin-top:4px;">
+                                <i class="fa-solid fa-star"></i> 4.8 / 5.0 (340+ Reviews)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-details">
+                        <p><i class="fa-solid fa-graduation-cap" style="color:var(--primary); margin-right:6px;"></i> MBBS, MD (Internal Medicine)</p>
+                        <p><i class="fa-solid fa-briefcase" style="color:var(--primary); margin-right:6px;"></i> 11 Years Clinical Experience</p>
+                        <p><i class="fa-solid fa-clock" style="color:var(--primary); margin-right:6px;"></i> Mon - Sat (10:00 AM - 04:00 PM)</p>
+                        <p><i class="fa-solid fa-tag" style="color:var(--accent); margin-right:6px;"></i> <strong>₹500</strong> Consultation Fee</p>
+                    </div>
+                </div>
+                <a href="appointment.html" class="primary-btn" style="width: 100%; justify-content: center;">
+                    <i class="fa-solid fa-calendar-check"></i> Book Appointment
+                </a>
+            </div>
+
+            <!-- Doctor 3 -->
+            <div class="doctor-card">
+                <div>
+                    <div class="doctor-header">
+                        <div class="doctor-avatar"><i class="fa-solid fa-user-doctor"></i></div>
+                        <div class="doctor-meta">
+                            <h3>Dr. Rahul Patil</h3>
+                            <p>Orthopedic & Joint Surgeon</p>
+                            <div style="color:#f59e0b; font-size:13px; margin-top:4px;">
+                                <i class="fa-solid fa-star"></i> 4.9 / 5.0 (190+ Reviews)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-details">
+                        <p><i class="fa-solid fa-graduation-cap" style="color:var(--primary); margin-right:6px;"></i> MS (Ortho), M.Ch (Joint Replacement)</p>
+                        <p><i class="fa-solid fa-briefcase" style="color:var(--primary); margin-right:6px;"></i> 14 Years Clinical Experience</p>
+                        <p><i class="fa-solid fa-clock" style="color:var(--primary); margin-right:6px;"></i> Tue - Sat (11:00 AM - 05:00 PM)</p>
+                        <p><i class="fa-solid fa-tag" style="color:var(--accent); margin-right:6px;"></i> <strong>₹750</strong> Consultation Fee</p>
+                    </div>
+                </div>
+                <a href="appointment.html" class="primary-btn" style="width: 100%; justify-content: center;">
+                    <i class="fa-solid fa-calendar-check"></i> Book Appointment
+                </a>
+            </div>
+
+            <!-- Doctor 4 -->
+            <div class="doctor-card">
+                <div>
+                    <div class="doctor-header">
+                        <div class="doctor-avatar"><i class="fa-solid fa-user-doctor"></i></div>
+                        <div class="doctor-meta">
+                            <h3>Dr. Neha Shah</h3>
+                            <p>Dermatologist & Cosmetologist</p>
+                            <div style="color:#f59e0b; font-size:13px; margin-top:4px;">
+                                <i class="fa-solid fa-star"></i> 4.7 / 5.0 (150+ Reviews)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-details">
+                        <p><i class="fa-solid fa-graduation-cap" style="color:var(--primary); margin-right:6px;"></i> MBBS, MD (Dermatology & Venereology)</p>
+                        <p><i class="fa-solid fa-briefcase" style="color:var(--primary); margin-right:6px;"></i> 9 Years Clinical Experience</p>
+                        <p><i class="fa-solid fa-clock" style="color:var(--primary); margin-right:6px;"></i> Mon - Fri (02:00 PM - 07:00 PM)</p>
+                        <p><i class="fa-solid fa-tag" style="color:var(--accent); margin-right:6px;"></i> <strong>₹600</strong> Consultation Fee</p>
+                    </div>
+                </div>
+                <a href="appointment.html" class="primary-btn" style="width: 100%; justify-content: center;">
+                    <i class="fa-solid fa-calendar-check"></i> Book Appointment
+                </a>
+            </div>
+
+            <!-- Doctor 5 -->
+            <div class="doctor-card">
+                <div>
+                    <div class="doctor-header">
+                        <div class="doctor-avatar"><i class="fa-solid fa-user-doctor"></i></div>
+                        <div class="doctor-meta">
+                            <h3>Dr. Rajesh Verma</h3>
+                            <p>Senior Neurologist</p>
+                            <div style="color:#f59e0b; font-size:13px; margin-top:4px;">
+                                <i class="fa-solid fa-star"></i> 5.0 / 5.0 (420+ Reviews)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-details">
+                        <p><i class="fa-solid fa-graduation-cap" style="color:var(--primary); margin-right:6px;"></i> MBBS, MD, DM (Neurology)</p>
+                        <p><i class="fa-solid fa-briefcase" style="color:var(--primary); margin-right:6px;"></i> 18 Years Clinical Experience</p>
+                        <p><i class="fa-solid fa-clock" style="color:var(--primary); margin-right:6px;"></i> Mon - Thu (10:00 AM - 03:00 PM)</p>
+                        <p><i class="fa-solid fa-tag" style="color:var(--accent); margin-right:6px;"></i> <strong>₹900</strong> Consultation Fee</p>
+                    </div>
+                </div>
+                <a href="appointment.html" class="primary-btn" style="width: 100%; justify-content: center;">
+                    <i class="fa-solid fa-calendar-check"></i> Book Appointment
+                </a>
+            </div>
+
+            <!-- Doctor 6 -->
+            <div class="doctor-card">
+                <div>
+                    <div class="doctor-header">
+                        <div class="doctor-avatar"><i class="fa-solid fa-user-doctor"></i></div>
+                        <div class="doctor-meta">
+                            <h3>Dr. Ananya Iyer</h3>
+                            <p>Pediatric Specialist</p>
+                            <div style="color:#f59e0b; font-size:13px; margin-top:4px;">
+                                <i class="fa-solid fa-star"></i> 4.9 / 5.0 (310+ Reviews)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-details">
+                        <p><i class="fa-solid fa-graduation-cap" style="color:var(--primary); margin-right:6px;"></i> MBBS, DCH, DNB (Pediatrics)</p>
+                        <p><i class="fa-solid fa-briefcase" style="color:var(--primary); margin-right:6px;"></i> 10 Years Clinical Experience</p>
+                        <p><i class="fa-solid fa-clock" style="color:var(--primary); margin-right:6px;"></i> Mon - Sat (09:00 AM - 01:00 PM)</p>
+                        <p><i class="fa-solid fa-tag" style="color:var(--accent); margin-right:6px;"></i> <strong>₹550</strong> Consultation Fee</p>
+                    </div>
+                </div>
+                <a href="appointment.html" class="primary-btn" style="width: 100%; justify-content: center;">
+                    <i class="fa-solid fa-calendar-check"></i> Book Appointment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MediCare Hospital. All doctors are licensed by the National Medical Council.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

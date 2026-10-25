@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Patient Profile - MediCare Healthcare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hospital" style="color: var(--primary);"></i>
+            Medi<span>Care</span>
+            <span class="logo-badge">HEALTH</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="patient-dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+            <a href="appointment.html"><i class="fa-solid fa-calendar-plus"></i> Book Visit</a>
+            <a href="my-appointments.html"><i class="fa-solid fa-calendar-days"></i> Appointments</a>
+            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="dashboard-header">
+            <div>
+                <p class="welcome-text">DIGITAL HEALTH RECORD</p>
+                <h1>Patient Profile & Demographics</h1>
+                <p>Manage your verified contact info, registered emergency contact, and clinical identification.</p>
+            </div>
+            <div>
+                <a href="appointment.html" class="primary-btn" style="background: white; color: var(--primary) !important;">
+                    <i class="fa-solid fa-plus"></i> New Appointment
+                </a>
+            </div>
+        </div>
+
+        <div class="profile-card" style="max-width: 680px;">
+            <div class="profile-icon">
+                <i class="fa-solid fa-user-check"></i>
+            </div>
+
+            <h2 style="color: var(--secondary); font-size: 22px; font-weight: 800;">
+                Verified Patient Identity
+            </h2>
+            <p style="color: var(--text-muted); font-size: 13.5px; margin-top: 4px;">
+                Linked with MediCare National Electronic Medical Records (EMR)
+            </p>
+
+            <div class="profile-details">
+                <div>
+                    <strong><i class="fa-solid fa-user" style="color:var(--primary); margin-right:4px;"></i> Full Name</strong>
+                    <p>shivani prajapati</p>
+                </div>
+
+                <div>
+                    <strong><i class="fa-solid fa-envelope" style="color:var(--primary); margin-right:4px;"></i> Email Address</strong>
+                    <p>test@gmail.com</p>
+                </div>
+
+                <div>
+                    <strong><i class="fa-solid fa-phone" style="color:var(--primary); margin-right:4px;"></i> Phone Number</strong>
+                    <p>09511860242</p>
+                </div>
+
+                <div>
+                    <strong><i class="fa-solid fa-calendar" style="color:var(--primary); margin-right:4px;"></i> Date of Birth</strong>
+                    <p>2026-10-22</p>
+                </div>
+
+                <div>
+                    <strong><i class="fa-solid fa-venus-mars" style="color:var(--primary); margin-right:4px;"></i> Gender</strong>
+                    <p>Female</p>
+                </div>
+
+                <div>
+                    <strong><i class="fa-solid fa-id-badge" style="color:var(--primary); margin-right:4px;"></i> Patient ID</strong>
+                    <p>PAT000002</p>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                <button class="primary-btn" onclick="showToast('Your patient information is up to date in the EMR.', 'success')">
+                    <i class="fa-solid fa-user-pen"></i> Update Info
+                </button>
+                <a href="medical-records.html" class="secondary-btn">
+                    <i class="fa-solid fa-file-medical"></i> View Medical Records
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MediCare Hospital. Information encrypted and stored strictly per Medical Privacy Regulations.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

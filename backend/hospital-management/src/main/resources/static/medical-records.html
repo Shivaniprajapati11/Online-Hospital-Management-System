@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Medical Records & Prescriptions - MediCare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hospital" style="color: var(--primary);"></i>
+            Medi<span>Care</span>
+            <span class="logo-badge">HEALTH</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="patient-dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+            <a href="appointment.html"><i class="fa-solid fa-calendar-plus"></i> Book Visit</a>
+            <a href="my-appointments.html"><i class="fa-solid fa-calendar-days"></i> Appointments</a>
+            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="dashboard-header">
+            <div>
+                <p class="welcome-text">ELECTRONIC MEDICAL RECORDS (EMR)</p>
+                <h1>Clinical Diagnostic & Prescription Records</h1>
+                <p>Access your past consultation summaries, e-prescriptions, lab tests, and imaging diagnostics.</p>
+            </div>
+            <div>
+                <button class="primary-btn" onclick="window.print()" style="background: white; color: var(--primary) !important;">
+                    <i class="fa-solid fa-download"></i> Export EMR Report
+                </button>
+            </div>
+        </div>
+
+        <div class="appointments-section">
+            <div class="appointments-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 25px;">
+                <div>
+                    <h2 style="font-size: 20px; font-weight: 700; color: var(--secondary);">
+                        <i class="fa-solid fa-notes-medical" style="color:var(--primary); margin-right:8px;"></i>
+                        Verified Clinical History
+                    </h2>
+                    <p style="color:var(--text-muted); font-size:13.5px;">Digitally signed by hospital medical staff.</p>
+                </div>
+                <span class="status completed"><i class="fa-solid fa-lock"></i> Protected Health Information</span>
+            </div>
+
+            <!-- Record 1 -->
+            <div class="appointment-box">
+                <div class="appointment-top">
+                    <h2><i class="fa-solid fa-file-waveform" style="color:var(--primary); margin-right:8px;"></i> General Health Consultation & Blood Biochemistry</h2>
+                    <span class="status completed"><i class="fa-solid fa-check-double"></i> Report Signed</span>
+                </div>
+                <div class="appointment-details">
+                    <div>
+                        <strong>Attending Physician</strong>
+                        <p><i class="fa-solid fa-user-doctor" style="color:var(--primary);"></i> Dr. Priya Mehta (General Medicine)</p>
+                    </div>
+                    <div>
+                        <strong>Consultation Date</strong>
+                        <p><i class="fa-solid fa-calendar-days" style="color:var(--primary);"></i> 20 September 2026</p>
+                    </div>
+                    <div>
+                        <strong>Clinical Assessment</strong>
+                        <p><i class="fa-solid fa-virus" style="color:var(--warning);"></i> Mild Seasonal Viral Fatigue, Normal Hemogram</p>
+                    </div>
+                    <div>
+                        <strong>Active Rx (Prescription)</strong>
+                        <p><i class="fa-solid fa-capsules" style="color:var(--accent);"></i> Multivitamin Tabs (1x daily for 15 days), Paracetamol 650mg SOS</p>
+                    </div>
+                </div>
+                <div style="margin-top: 15px; border-top: 1px solid #f1f5f9; padding-top: 12px; display:flex; justify-content:flex-end; gap: 10px;">
+                    <button class="secondary-btn" style="padding:6px 14px; font-size:13px;" onclick="showToast('Downloading Clinical Summary PDF...', 'info')">
+                        <i class="fa-solid fa-file-pdf"></i> Download PDF
+                    </button>
+                    <a href="appointment.html" class="primary-btn" style="padding:6px 14px; font-size:13px;">
+                        <i class="fa-solid fa-repeat"></i> Book Follow-Up
+                    </a>
+                </div>
+            </div>
+
+            <!-- Record 2 -->
+            <div class="appointment-box">
+                <div class="appointment-top">
+                    <h2><i class="fa-solid fa-heart-pulse" style="color:var(--danger); margin-right:8px;"></i> Comprehensive 12-Lead ECG & Cardiac Screening</h2>
+                    <span class="status completed"><i class="fa-solid fa-check-double"></i> Normal Echo</span>
+                </div>
+                <div class="appointment-details">
+                    <div>
+                        <strong>Senior Cardiologist</strong>
+                        <p><i class="fa-solid fa-user-doctor" style="color:var(--primary);"></i> Dr. Amit Sharma (Cardiology)</p>
+                    </div>
+                    <div>
+                        <strong>Consultation Date</strong>
+                        <p><i class="fa-solid fa-calendar-days" style="color:var(--primary);"></i> 10 August 2026</p>
+                    </div>
+                    <div>
+                        <strong>Clinical Assessment</strong>
+                        <p><i class="fa-solid fa-circle-check" style="color:var(--accent);"></i> Normal Sinus Rhythm (HR: 72 bpm, BP: 120/80)</p>
+                    </div>
+                    <div>
+                        <strong>Lifestyle Guidance</strong>
+                        <p><i class="fa-solid fa-apple-whole" style="color:var(--primary);"></i> Low Sodium Diet, 30 min daily aerobic workout</p>
+                    </div>
+                </div>
+                <div style="margin-top: 15px; border-top: 1px solid #f1f5f9; padding-top: 12px; display:flex; justify-content:flex-end; gap: 10px;">
+                    <button class="secondary-btn" style="padding:6px 14px; font-size:13px;" onclick="showToast('Downloading Cardiac ECG Report...', 'info')">
+                        <i class="fa-solid fa-file-pdf"></i> Download PDF
+                    </button>
+                    <a href="appointment.html" class="primary-btn" style="padding:6px 14px; font-size:13px;">
+                        <i class="fa-solid fa-calendar-check"></i> Next Routine Checkup
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MediCare Hospital. Records are stored per National Health Information Privacy standards.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
